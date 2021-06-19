@@ -43,7 +43,8 @@ p {
     width: 75px;
 }
 
-hr {
+/* Line IDs */
+#line-home {
     max-width: 170px;
 }
 
@@ -104,4 +105,24 @@ ul {
     display: inline-block;
     font-size: 16px;
   }
+
+.card {
+    border-style: solid;
+    border-color: gray;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: white;
+
+}
+
+.project-title {
+    text-align: left;
+}
+
+.card:hover {
+    border-color: white;
+    cursor: pointer;
+}
 
