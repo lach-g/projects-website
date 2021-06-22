@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- Style Sheets -->
+  <link href="../css/reset.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="../css/main.css" rel="stylesheet" type="text/css" media="all"/>
+
+	<title>Simon Says Project</title>
+
+</head>
+
+<!-- Header Image -->
+<div class="container">
+  <img id="image-code" src="../images/code.jpg" alt="">
+</div>
+
+
+<!-- Navigation Menu -->
+<ul class="nav-menu">
+  <li class="menu-item"><a href="../index.html" style="text-decoration: none;">HOME</a></li>
+  <li class="menu-item"><a href="/html/projects.html" style="text-decoration: none;">PROJECTS</a></li>
+  <li class="menu-item"><a href="#" style="text-decoration: none;">PHOTOGRAPHY</a></li>
+  <li class="menu-item"><a href="/html/login.html" style="text-decoration: none;">LOGIN</a></li>
+</ul>
+
+
+
+<!-- Title -->
+<body>
+  <div class="working-margins">
+    <h1 id="page-head"><b>Simon Says Project</b></h1>
+
+
+      <h2 class="project-header">Discussion</h2>
+        <hr>
+        <p>Starting from the micro level of where each input goes for a command, either from a user or file, it was decided to process this into its own struct, where the animation function pointer could be added as needed. This way, it could be transported through the program in a self-contained manner. It was important that when parsing the command description, their would be no buffer overflow, ensuring the integrity of the program.</p>
+        <p>On a macro level there are two linked lists in the program, one is the reference list which is self-contained within the user command list. Structuring it in this manner was decided for to make it simpler to add more Simon Says commands if needed, thus making it more scalable. The reference command is looped through when checking user input for a match to the description entered. This has a time complexity in the worst case of O(n). The linked list structure was also beneficial for the display of commands processed as it acted as a queue, with the correct functions implemented, as is expected performance-wise from a program that takes multiple commands. The complications that were overcome, were mostly to do with the header guards, as with so many files and three different structs, their were dependancies that were breaking the compilation without them.</p>
+
+      <h2 class="project-header">Summary of User Input</h2>
+      <hr>
+        <div class="instruction-block">
+          <ol class="instructions-list">
+            <li>In the main menu the user makes a selection by choosing an option from 1-5 inclusive</li>
+            <hr class="splits">
+            <li>Option one the Simon Says command to enter should be formatted as “Simon says dance” or “Simon didn’t say touch head”, and an action that is not known will be given the default animation.</li>
+            <hr class="splits">
+            <li>To load commands enter the text file name  with extension e.g. “everything_mode.txt” </li>
+            <hr class="splits">
+            <li>In the Delete commands mode the user must enter an integer lower or equal to the number of commands loaded into the linked list, if it is too high or none have been loaded the program will not allow any deleting.</li>
+            <hr class="splits">
+            <li>Playing will play through all animations entered by the user via file and/or command line.</li>
+            <hr class="splits">
+            <li>Exit will immediately quit the program.</li>
+          </ol>
+        </div>
+      
+
+      <h2 class="project-header">In Action</h2>
+      <hr>
+
+        <h3>How to run:</h3>
+        <img class="gif" src="../gifs/simonsays/run-app.gif" alt="Example of command input and output for Simon Says Program." />
+
+        <h3>Entering commands:</h3>
+        <img class="gif" src="../gifs/simonsays/other-commands.gif" alt="Example of command input and output for Simon Says Program." />
+
+        <h3>Reading input from file & deleting:</h3>
+        <img class="gif" src="../gifs/simonsays/everything-mode.gif" alt="Reading input from file and deleting commands." />
+
+
+      <h2 class="project-header">Install</h2>
+      <hr>
+        <h3>Requirements:</h3>
+        <ul class="install-list" type="circle">
+            <li>Language: C</li>
+            <li>Operating System: Manjaro Linux</li>
+            <li>Compiler: gcc</li>
+        </ul>
+
+      <p class="project-source">Visit the <a href="https://github.com/lach-g/SimonSays" style="text-decoration: none;" target="_blank">GitHub project page</a> to clone the repo.</p>
+    
+       
+
+
+
+
+
+
+    <!-- Social link-outs -->
+    <div id="bottom-fixed">
+      <a href="https://github.com/lach-g/" style="text-decoration: none;" target="_blank">
+        <img class="logos" src="../images/github-logo.png" alt="Github logo" />
+      </a>
+      
+      <a href="https://www.linkedin.com/in/lachlan-greenland-42b399193/" target="_blank">
+        <img class="logos linkedin" src="../images/linkedin-logo.png" alt="LinkedIn logo" />
+      </a>
+    </div>
+
+  </div>
+  
+
+</body>
+</html>

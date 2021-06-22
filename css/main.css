@@ -27,8 +27,20 @@ h2 {
     margin-bottom: 20px;
 }
 
+h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.6em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.project-header {
+    text-align: left;
+}
+
 p {
-    text-align: justify;
+    text-align: left;
+    margin-bottom: 1em;
 }
 
 .logos {
@@ -48,8 +60,18 @@ p {
     max-width: 170px;
 }
 
+/* Line splitting in instruction block */
+.splits {
+    border: 4px thick black;
+}
+
+hr {
+    margin-bottom: 0.5em;
+    color: grey;
+}
+
 .container {
-    height: 150px;
+    height: 300px;
     width: 100%;
 }
 
@@ -60,7 +82,7 @@ p {
 } 
 
 /* Menu */
-ul {
+.nav-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -68,43 +90,62 @@ ul {
     /* background-color: #222; */
     display: inline-block;
   }
+
+.install-list {
+list-style: none; /* Remove default bullets */
+text-align: left;
+}
+
+.install-list li::before {
+content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+color: white; /* Change the color */
+font-weight: bold; /* If you want it to be bold */
+display: inline-block; /* Needed to add space between the bullet and the text */
+width: 1em; /* Also needed for space (tweak if needed) */
+margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.instructions-list {
+    text-align: left;
+    list-style-type: decimal;
+}
   
-  li {
+.menu-item {
     float: left;
   }
   
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 0.85em;
-  }
-  
-  li a:hover {
-    background-color: #111;
-  }
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 0.85em;
+}
 
-  /* Text input boxes */
-  input[type=text] {
-      /* display: block; */
-      box-sizing: border-box;
-      padding: 12px 20px;
-      margin: 7px;
-      text-align: center;
-  }
+li a:hover {
+background-color: #111;
+}
 
-  button[type=submit] {
-    background-color: #555555;
-    border: none;
-    color: white;
-    padding: 5px 10px;
+/* Text input boxes */
+input[type=text] {
+    /* display: block; */
+    box-sizing: border-box;
+    padding: 12px 20px;
+    margin: 7px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  }
+}
+
+button[type=submit] {
+background-color: #555555;
+border: none;
+color: white;
+padding: 5px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
 
 .card {
     border-style: solid;
@@ -124,5 +165,32 @@ ul {
 .card:hover {
     border-color: white;
     cursor: pointer;
+}
+
+/* Hyperlink colour*/
+a {
+    color: #6666FF;
+}
+
+.gif {
+    width: 100%;
+    border: 2px solid;
+    border-color: #1c1c14;
+    padding: 5px;
+}
+
+/* Paragraph sentence to move away from requirments list. */
+.project-source {
+    margin-top: 1em;
+}
+
+/* Styling instructions */
+.instruction-block {
+    background-color: #939799;
+    padding: 2em;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 18px;
+    color: black;
 }
 
