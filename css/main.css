@@ -20,6 +20,12 @@ h1 {
     line-height: 1.5em;
 }
 
+#page-head {
+    text-shadow: 1px 0 #db3eb1,-1px 0 #41b6e6;
+    /* font-weight: bolder; */
+    font-family: monospace;
+}
+
 
 h2 {
     font-size: 1.5em;
@@ -43,6 +49,10 @@ p {
     margin-bottom: 1em;
 }
 
+.p-centered {
+    text-align: center;
+}
+
 .logos {
     width: 60px;
     float: center;
@@ -58,6 +68,7 @@ p {
 /* Line IDs */
 #line-home {
     max-width: 170px;
+    color: #b33745
 }
 
 /* Line splitting in instruction block */
@@ -160,6 +171,7 @@ font-size: 16px;
 
 .project-title {
     text-align: left;
+    color: #fffa4f;
 }
 
 .card:hover {
