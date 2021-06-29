@@ -14,6 +14,11 @@ body {
     margin: auto;
 }
 
+.extended-margins {
+    max-width: 1440px;
+    margin: auto;
+}
+
 h1 {
     font-size: 2em;
     margin: 1em;
@@ -67,8 +72,8 @@ p {
 
 /* Line IDs */
 #line-home {
-    max-width: 170px;
-    color: #b33745
+    max-width: 190px;
+    color: #b33745;
 }
 
 /* Line splitting in instruction block */
@@ -171,7 +176,9 @@ font-size: 16px;
 
 .project-title {
     text-align: left;
-    color: #fffa4f;
+    /* color: #f4d676; */
+    color: #f4d676;
+    text-decoration-line: underline;
 }
 
 .card:hover {
@@ -205,4 +212,48 @@ a {
     font-size: 18px;
     color: black;
 }
+
+/* Photography styling */
+.containerX {
+    position: relative;
+    /* width: 0%; */
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .containerX:hover .image {
+    opacity: 0.3;
+  }
+  
+  .containerX:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+
+
 
