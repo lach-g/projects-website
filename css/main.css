@@ -19,6 +19,11 @@ body {
     margin: auto;
 }
 
+.gallery-margins {
+    max-width: 2048px;
+    margin: auto;
+}
+
 h1 {
     font-size: 2em;
     margin: 1em;
@@ -253,6 +258,22 @@ a {
     font-size: 16px;
     padding: 16px 32px;
   }
+
+  .photo {
+      width: 100%;
+      border-style: solid;
+      border-width: 10px;
+      border-color: white;
+      margin-bottom: 2em;
+  }
+
+.photo-divider {
+    max-width: 400px;
+    background-color: #5E5E5E;
+    height: 2px;
+    margin-bottom: 2.5em;
+    /* border-radius: 20px; */
+}
 
 
 
